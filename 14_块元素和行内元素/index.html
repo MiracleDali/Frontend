@@ -3,20 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>块元素和行内元素</title>
+    <title>块元素和行内元素（内联元素）</title>
 </head>
 <body>
     <h1>块元素和行内元素</h1>
     <hr color="red" size="2" width="50%" align="left">
     <img src="1.png" alt="图片未找到" width="800">
-    <p>官方文档地址：https://developer.mozilla.org/zh-CN/docs/Web/HTML/Guides/Content_categories</p>
+
+    <p>官方文档地址：
+        <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Guides/Content_categories" target="_blank">
+            https://developer.mozilla.org/zh-CN/docs/Web/HTML/Guides/Content_categories
+        </a>
+    </p>
+    
     <br>
+    <h3>内联元素和块级元素的区别</h3>
     <img src="2.png" alt="图片未找到" width="800">
     <br>
-
     <hr color="red" size="2" width="50%" align="left">
     <br>
-    <p></p>
+
+    <!-- 块级元素 -->
+    <p style="color: blue"><b>块级元素：自上而下</b></p>
+    <h1>标题</h1>
+    <p>段落</p>
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+    </ul>
+
+    <br>
+    <hr color="red" size="2" width="50%" align="left">
+    <!-- 内联元素 -->
+     <p style="color: blue"><b>内联元素，在一行,不能识别宽高</b></p>
+    <a href="#">超链接</a>
+    <span>内容</span>
+    <em>注重语气</em>
+    <i>这是i标签</i>
+    <b>这是b标签</b>
+
+    
+    <br>
+    <hr color="red" size="2" width="50%" align="left">
+    <!-- 行内块级元素 -->
+    <p style="color: blue">
+        <b>行内块级元素（特点：不换行。能够识别宽度）</b>
+    </p> 
+    <button>这是一个按钮</button> <br>
+    <span>这是 button 标签</span> <br>
+    <span>还有 img 标签</span> <br>
+
+
     
 
 </body>    

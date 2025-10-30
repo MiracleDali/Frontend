@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素选择器</title>
+    <style>
+
+        /* 全局选择器使用*星号 */
+        * {
+            font-size: 20px;
+            font-family: 'Arial';
+            color: blue;
+        }
+
+        /* 元素选择器 */
+        a {
+            color: red;
+        }
+        
+        /* 类选择器 */
+        .class_one {
+            color: rgb(210, 130, 0);
+        }
+        .class_size {
+            font-size: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h3>全局选择器</h3>
+    <p>文章</p>
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+    </ul>
+    <hr color="red" size="2" width="80%" align="left">
+
+    <h3>元素选择器</h3>
+    <a href="./元素选择器.html" target="_blank">点击跳转元素选择器页面</a>
+    <hr color="red" size="2" width="80%" align="left">
+
+    <!-- 类选择器最方便最长使用 -->
+    <!-- 使用空格隔开可以在一个标签上使用多个类选择器 -->
+    <h3 class="class_one class_size">类选择器</h3>
+    <p class="class_one">文章</p>
+    <ul class="class_one">
+        <li class="class_one">列表1</li>
+        <li class="class_one">列表2</li>
+    </ul>
+
+</body>
+</html>

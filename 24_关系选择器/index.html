@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关系选择器</title>
+    <style>
+        /* 后代选择器 */
+        ul li {
+            color: red
+        }
+        /* 子代选择器 */
+        ul > li {
+            color: blue
+        }
+        /* 相邻兄弟选择器 */
+        li + li {
+            color: green
+        }
+        /* 通用兄弟选择器 */
+        li ~ li {
+            color: rgb(213, 7, 155)
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: red;">关系选择器</h1>
+    <img src="1.png" alt="" width="12%" border=1px solid green>
+
+    <h2 style="color: black">关系选择器</h2>
+    <ul>
+        <li>列表1</li>
+        <li>列表2</li>
+        <li>列表3</li>
+        <div>
+            <ol>
+                <li>列表4</li>
+                <li>列表5</li>
+            </ol>
+        </div>
+    </ul>
+</body>
+</html> 

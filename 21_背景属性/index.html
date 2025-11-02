@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景属性</title>
+</head>
+<body>
+    <h1>背景属性</h1>
+    <img src="1.png" alt="背景属性" title="背景属性" width="40%">
+    <hr color="red" size="2" width="80%" align="left">
+
+    <ul type="disc">
+        <li>
+            <h2>背景颜色</h2>
+            <div style="width: 200px; 
+                        height: 200px; 
+                        background-color: green;">
+            </div>
+        </li>
+        <li>
+            <h2>背景图片</h2>
+            <p style="color: red; font-size: 20px;">background-repeat 该属性设置如何平铺背景图像</p>
+            <img src="2.png" alt="" width="40%">
+            <div style="width: 1000px;
+                        height: 500px;
+                        background-image: url(girl.png);
+                        background-repeat: no-repeat;">
+            </div>
+            <p style="color: red; font-size: 20px;">设置图像的大小</p>
+            <img src="3.png" alt="" width="40%">
+            <div style="width: 1000px;
+                        height: 500px;
+                        background-image: url(girl2.png);
+                        background-repeat: no-repeat;
+                        /* background-size: 50% 100%; */
+                        /* background-size: cover; */
+                        background-size: contain;">
+            </div>
+            <p style="color: red; font-size: 20px;">设置图像的位置</p>
+            <img src="4.png" alt="" width="40%">
+            <div style="width: 300px;
+                        height: 300px;
+                        background-image: url(girl3.png);
+                        /* background-size: 50% 100%; */
+                        /* background-size: cover; */
+                        background-position: top center;
+                        ">
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子模型</title>
+    <style>
+        img {
+            width: 55%;
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+        .container {
+            margin: 10px;
+            width: 500px;
+            height: 500px;
+            background-color: #555555;
+            /* 弹性盒子模型-默认横向摆放 */
+            display: flex;
+            /* 弹性盒子模型-横向排列 */
+            flex-direction: row;
+            /* 弹性盒子模型-居中 */
+            justify-content: center;
+            align-items: center;
+        }
+        .example {
+            /* 弹性盒子模型-纵向排列 */
+            flex-direction: column;
+            /* 弹性盒子模型-横向排列-反向 */
+            flex-direction: row-reverse;
+            /* 弹性盒子模型-纵向排列-反向 */
+            flex-direction: column-reverse;
+        }
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            /* 弹性盒子模型-分配比例 */
+            flex: 2;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 弹性盒子模型-分配比例 */
+            flex: 2;
+        }
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            /* 弹性盒子模型-分配比例 */
+            flex: 1
+        }
+    </style>
+</head>
+<body>
+    <img src="1.png" alt="">
+    <img src="2.png" alt="">
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

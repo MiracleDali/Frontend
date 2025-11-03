@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+    <style>
+        .container{
+            width: 500px;
+            /* 设置高度清除浮动 */
+            height: 300px;
+            background-color: #888;
+            /* 清除浮动 - 这种使用最多 */
+            overflow: hidden;
+            clear: both;
+        }
+        /* 创建伪元素-清除浮动 */
+        .container::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            margin: 5px;
+            float: left;
+        }
+        .text{
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            /* clear 属性 清除浮动 */
+            clear: both;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:red">浮动的副作用</h1>
+    <ul>
+        <li>浮动元素会造成父元素高度塌陷</li>
+        <li>后续元素会受到影响</li>
+    </ul>
+    <img src="1.png" alt="" width="30%"  border="2">
+    <hr color="red" size="2" align="left" width="60%">
+
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="text"></div>
+    </div>
+    <div class="text"></div>
+</body>
+</html>

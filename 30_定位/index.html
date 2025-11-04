@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+    <style>
+        h1{
+            margin-left: 10px;
+            margin-top: 10px;
+            color: red;
+        }
+        img{
+            width: 40%;
+            margin-left: 10px;
+            border: 2px solid black;
+        }
+        li{
+            width: 200px;
+            margin-top: 20px;
+            height: 50px;
+            float: left;
+        }
+        ul{
+            margin-left: 10px;
+            width: 40%;
+            border: 2px solid #00ff6e;
+            overflow: hidden;
+            clear: both;
+        }
+        .xddw{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: relative;   /* 相对定位 */
+            left: 50px;     /* 相对定位 */
+            top: 50px;      /* 相对定位 */
+        } 
+        .jddw{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;   /* 绝对定位 */
+            left: 800px;     /* 绝对定位 */
+            top: 50px;       /* 绝对定位 */
+        }
+        .gddw{
+            width: 120px;
+            height: 120px;
+            background-color: #00ff6e;
+            position: fixed;   /* 固定定位 - 浏览器窗口改变时，元素位置不变 */
+            left: 100px;       /* 固定定位 */
+            top: 100px;        /* 固定定位 */
+        }
+    </style>
+</head>
+<body>
+    <h1>定位</h1>
+    <img src="1.png" alt="">
+    <ul type="none">
+        <li>relative - 相对定位</li>
+        <li>absolute - 绝对定位</li>
+        <li>fixed - 固定定位</li>
+    </ul>
+    <hr color="red" size="2" width="60%" align="left">
+
+    <!-- 相对定位 -->
+    <div class="xddw">
+        <p>相对定位</p>
+    </div>
+    <!-- 绝对定位 脱离文档流 -->
+    <div class="jddw">
+        <p style="color: aliceblue;">绝对定位，脱离文档流</p>
+    </div> 
+    <!-- 固定定位 脱离文档流 浏览器窗口改变时，元素位置不变 -->
+    <div class="gddw">
+        <p style="color: aliceblue;">固定定位 脱离文档流 浏览器窗口改变时，元素位置不变</p>
+    </div>
+
+</body>
+</html>

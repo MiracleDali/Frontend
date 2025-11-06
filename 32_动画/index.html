@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画</title>
+    <style>
+        img{
+            margin: 10px 0px;
+            padding: 20px;
+            width: 40%;
+            border: 1px solid black;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        .example{
+            width: 200px;
+            height: 200px;
+            background-color: chartreuse;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+            margin: 20px auto;
+            /* 动画 */
+            animation: myAnim 3s linear 0s infinite;
+        }
+        .example:hover{
+            /* 暂停动画 */
+            animation-play-state: paused;
+        }
+        @keyframes myAnim{
+            0%{
+                opacity: 0.2;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+                width: 180px;
+                height: 180px;
+                border-radius: 0px;
+            }
+            50%{
+                opacity: 0.7;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+                width: 200px;
+                height: 200px;
+                border-radius: 10px;
+            }
+            100%{
+                opacity: 0.2;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+                width: 180px;
+                height: 180px;
+                border-radius: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>动画</h1>
+    <hr color="red" size="2" align="left" width="60%">
+    <img src="1.png" alt="">
+    <hr color="red" size="1" align="left" width="60%">
+
+    <div style="width: 50%; height: 210px;">
+        <div class="example"></div>
+    </div>
+    <hr color="red" size="1" align="left" width="60%">
+    
+</body>
+</html>

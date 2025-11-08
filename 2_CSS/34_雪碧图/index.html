@@ -5,21 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>雪碧图</title>
     <style>
-        .icon1,.icon2 {
+        div {
+            width: 400px;
+        }
+        .icon1,.icon2,.icon3 {
                 display: block;
                 width: 45px;
                 height: 70px;
                 background-image: url(1.png);
                 background-position: -21px -9px;
                 border: 1px solid black;
+                float: left;
         }
         .icon2 {
                 background-position: -309px -82px;
         }
+        .icon3 {
+                background-position: -452px -157px;
+        }
     </style>
 </head>
 <body>
-    <span class="icon1"></span>
-    <span class="icon2"></span>
+    <h1>雪碧图</h1>
+    <hr color="red" size="2px" width="60%" align="left">
+    <div>
+        <span class="icon1"></span>
+        <span class="icon2"></span>
+        <span class="icon3"></span>
+    </div>
 </body>
 </html>

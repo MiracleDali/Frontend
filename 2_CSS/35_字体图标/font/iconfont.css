@@ -1,0 +1,49 @@
+@font-face {
+  font-family: "iconfont"; /* Project id  */
+  src: url('iconfont.ttf?t=1762621121873') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-a-01-10qianzhaodeng-jinguangshuHeadlights-lowerdippedbeam:before {
+  content: "\e608";
+}
+
+.icon-a-01-11shikuodengPositionlamps:before {
+  content: "\e609";
+}
+
+.icon-a-01-12zhuchedengParkinglight:before {
+  content: "\e60a";
+}
+
+.icon-a-01-14houwudengaRearfoglight:before {
+  content: "\e60b";
+}
+
+.icon-a-01-13qianwudengFrontfoglight:before {
+  content: "\e60c";
+}
+
+.icon-a-01-16qianzhaodengfuyangtiaojieqiHeadlampsetter:before {
+  content: "\e60d";
+}
+
+.icon-a-01-17dengguangguzhangExteriorlampfailure:before {
+  content: "\e60e";
+}
+
+.icon-a-01-15liangduLightintensity:before {
+  content: "\e60f";
+}
+
+.icon-a-01-18yibiaodengInstrumentlighting:before {
+  content: "\e610";
+}
+

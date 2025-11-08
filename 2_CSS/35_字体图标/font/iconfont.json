@@ -1,0 +1,72 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "45994960",
+      "name": "Headlights_lowe_dipped_beam",
+      "font_class": "a-01-10qianzhaodeng-jinguangshuHeadlights-lowerdippedbeam",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "45994961",
+      "name": "Position_lamps",
+      "font_class": "a-01-11shikuodengPositionlamps",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "45994962",
+      "name": "Parking_light",
+      "font_class": "a-01-12zhuchedengParkinglight",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "45994963",
+      "name": "Rear_fog_light",
+      "font_class": "a-01-14houwudengaRearfoglight",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "45994964",
+      "name": "Front_fog_light",
+      "font_class": "a-01-13qianwudengFrontfoglight",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "45994965",
+      "name": "Headlamp_setter",
+      "font_class": "a-01-16qianzhaodengfuyangtiaojieqiHeadlampsetter",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "45994966",
+      "name": "Exterior lamp failure",
+      "font_class": "a-01-17dengguangguzhangExteriorlampfailure",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "45994967",
+      "name": "Light intensity",
+      "font_class": "a-01-15liangduLightintensity",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "45994968",
+      "name": "Instrument lighting",
+      "font_class": "a-01-18yibiaodengInstrumentlighting",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    }
+  ]
+}

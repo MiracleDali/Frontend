@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>typeof运算符</title>
+</head>
+<body>
+    <h1>typeof运算符</h1>
+    <p>查看源码和控制台</p>
+    
+    <script>
+
+        var age = 18;
+        var name = "冰冰";
+        var learn = true;
+
+        // 数组对象
+        var arr = [1,2,3,4,5];
+        // 对象
+        var obj = {};
+
+        // typeof: 判断数据类型 （判断基本数据类型使用）
+        console.log(typeof age);  // 打印数据类似和python的print(type(num))一样
+        console.log(typeof name);  // 输出结果为 string
+        console.log(typeof learn); // 输出结果为 boolean 布尔类型
+
+        // 一般不适用 typeof 判断下面的数据类型
+        console.log(typeof arr);   // 判断数组 输出结果为 object
+        console.log(typeof obj);  // 判断对象 输出结果为 object
+
+        console.log(typeof null);  // 输出结果为 object
+        console.log(typeof undefined);   // 输出结果为 undefined
+
+    </script>
+
+</body>
+</html>

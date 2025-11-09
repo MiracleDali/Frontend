@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据类型</title>
+    <!-- 样式 -->
+    <style>
+        ul {
+            list-style-type: disc;
+            list-style-position: outside; 
+            background-color: rgba(118, 199, 71, 0.863);
+            width: 320px;
+            border-radius: 10px;
+            padding: 10px;
+            padding-left: 40px;
+            box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.1);
+            border: 1px solid rgb(0, 0, 0, 0.2);
+            overflow: hidden;
+            clear: both;
+            margin-bottom: 40px;
+        }
+        li {
+            width: 150px;
+            font-size:large;
+            float: left;
+            color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>数据类型</h1>
+    <ul>
+        <li>数值</li>
+        <li>字符串</li>
+        <li>布尔值</li>
+        <li>undefined</li>
+        <li>null</li>
+        <li>对象</li>
+        <li>Symbol</li>
+        <li>BigInt</li>
+    </ul>
+
+    <h3>基本数据类型/原始类型</h3>
+    <ul>
+        <li>数值</li>
+        <li>字符串</li>
+        <li>布尔值</li>
+    </ul>
+
+    <h3>合成类型/复合类型</h3>
+    <ul>
+        <li style="width: 100%;">包含数值，字符串，布尔值</li>
+        <li>
+            var user = {<br> &nbsp;&nbsp;name: "冰冰", <br>&nbsp;&nbsp;age: 20, <br>&nbsp;&nbsp;learn: true <br>}
+        </li>
+    </ul>
+
+
+    <!-- 脚本 --> <!-- 脚本 --> <!-- 脚本 -->
+    <script>
+        // 基本数据类 // 原始类型
+        // 数值 类型
+        var age = 18;
+
+        // 字符串 类型
+        var name = "hello world";
+        var hello = "你好，世界"
+
+        // 布尔值 类型
+        var isOk = true;
+        var is = false;
+
+        // 合成类型: 对象
+        // 合成类型: 对象
+        var user = {
+            name: "hello world",
+            age: 18,
+            isOk: true,
+            hello: "你好，世界",
+            jobs:{
+                name:"程序员",
+                age:18  
+            },
+            num: [1,2,3,4,5,6,7,8,9,10]
+        }
+        console.log(user)
+
+        var a = undefined;
+        var b = null;
+
+    </script>
+    
+</body>
+</html>

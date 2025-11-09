@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注释和常见输出方式</title>
+    <style>
+        ul {
+            list-style-type: disc;
+            list-style-position: outside; 
+            background-color: rgb(126, 187, 102);
+            width: 50%;
+            border-radius: 10px;
+            padding: 10px;
+            padding-left: 30px;
+            box-shadow: 6px 6px 6px rgb(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>注释和常见输出方式</h1>
+    <ul>
+        <li>注释-单行  //</li>
+        <li>注释-多行  /* */</li>
+    </ul>
+
+    <h1>三种输出</h1>
+    <ul>
+        <li>alert 弹窗输出</li>
+        <li>document.write 浏览器输出</li>
+        <li>console.log 控制台输出</li>
+    </ul>
+
+
+    <script>
+        //  注释-单行
+
+        /*
+        多行注释
+        多行注释
+        */
+
+        var age = 18;
+        var name = "冰冰"
+        // 控制台输出
+        console.log("控制台输出-我是", name, "今年", age, "岁")
+
+        // 浏览器输出
+        document.write("浏览器输出-我是", name, "今年", age, "岁")
+
+        // 弹窗输出
+        alert(`弹窗输出-我是${name}今年${age}岁`);
+
+
+    </script>
+</body>
+</html>

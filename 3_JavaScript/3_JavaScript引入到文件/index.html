@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript引入到文件</title>
+
+    <style>
+        img {
+            width: 50%;
+            border: 1px solid black;
+            margin-bottom: 20px;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>JavaScript引入到文件</h1>
+    <img src="1.png" alt="">
+    <hr color="red" size="2px" width="60%" align="left">
+
+    <!-- ============== -->
+    <h2>将js嵌入到 HTML 文件中</h2>
+    <p>alert 弹窗就是</p>
+    <script>
+        alert("将js嵌入到 HTML 文件中");
+    </script>
+
+    <!-- ============== -->
+    <h2>引入本地独立js文件-.js结尾的文件</h2>
+    <p>在控制台查看 引入js文件的打印</p>
+    <script src="./hello.js"></script>
+
+    <!-- ============== -->
+    <h2>引入外部js文件</h2>
+    <p>在控制台查看 引入js文件的打印</p>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</body>
+</html>

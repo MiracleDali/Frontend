@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>布尔运算符</title>
+</head>
+<body>
+    <h1>布尔运算符</h1>
+    <ul>
+        <li> ! ： 取反运算符 <br>
+            <p>
+                undefined---null---false---0---NaN---空字符串(''), <br>
+                上面6个都是false, 取反都是true  <br>
+                其他值都是true, 取反都是false
+            </p>
+        </li>
+        <li> && ： 且运算符
+            <p>
+                多个条件都要满足,并且都是true,结果为true,有一个条件不满足就返回false
+            </p>
+        </li>
+        <li> || ： 或运算符
+            <p>
+                多个条件只要有一个满足,结果为true,全部不满足返回false
+            </p>
+        </li>
+    </ul>
+
+    <script>
+        // 取反运算符 ！
+        console.log("取反运算符") 
+        var flag = false;
+        console.log(!flag)  // true
+        console.log(!undefined)  // true
+        console.log(!null)  // true
+        console.log(!0)  // true
+        console.log(!NaN)  // true
+        console.log(!'')  // true 
+
+        // 且运算符   &&
+        console.log("且运算符") 
+        var flag = true;
+        console.log(flag && true)  // true
+        console.log(flag && false) // false
+        console.log(10 > 5 && 10 < 5) //  false
+        console.log(10 > 5 && 100 >= 20 && 5 < 6) // true
+
+        // 或运算符  ||
+        console.log("或运算符") 
+        console.log(flag || true)  // true
+        console.log(10 > 5 || 10 < 5)  // true
+        console.log(10 < 5 || 100 === 20 || 5 > 6) // false
+
+    </script>
+</body>
+</html>
+

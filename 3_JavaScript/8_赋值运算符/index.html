@@ -4,8 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>赋值运算符</title>
+    <style>
+
+    </style>
 </head>
 <body>
-    
+    <h1>赋值运算符</h1>
+    <ul>
+        <li>1: [ = ] </li>
+        <li>2: [ += ] </li>
+        <li>3: [ -= ] </li>
+        <li>4: [ *= ] </li>
+        <li>5: [ /= ] </li>
+        <li>6: [ %= ] </li>
+    </ul>    
+
+    <!-- js 代码 -->
+    <script>
+
+        // 赋值运算符
+        // =
+        var num1 = 100;
+        var num2 = num1;
+        console.log("num1:", num1, "num2:", num2);
+
+        // +=
+        var x = 10;
+        var y = 10;
+        console.log(x += y)  // 20   x = x + y
+        // -=
+        console.log(x -= y)  // 10   x = x - y  //上一步x加y后等于20
+        // *=
+        console.log(x *= y)  // 100   x = x * y  // 上一步x减y后等于10
+        // /=
+        console.log(x /= y)  // 10   x = x / y  //上步x乘y后等于100
+        // %=
+        console.log(x %= y)  // 0   x = x % y  // 上一步x除以y后等于10
+
+
+    </script>
+
 </body>
 </html>

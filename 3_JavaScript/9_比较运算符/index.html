@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>比较运算符</title>
+</head>
+<body>
+    <h1>比较运算符</h1>
+    <p>
+        比较运算符用于比较两个值的大小，然后返回一个布尔值【true 或 false】
+        <ul>
+            <li>==   ：等于</li>
+            <li>===  ：等于，并且类型相同 严格相等运算符</li>
+            <li>!=   ：不等于</li>
+            <li>!==  ：不等于，并且类型不同 严格相等运算符</li>
+            <li>>    ：大于</li>
+            <li><    ：小于</li>
+            <li>>=   ：大于等于</li>
+            <li><=   ：小于等于</li>
+        </ul>
+    </p>
+    
+    <script>
+        // 比较运算符
+        var a = 10;
+        var b = 20;
+        var c = "10";
+        console.log(a > b); // false
+        console.log(a < b); // true
+        console.log(a >= b); // false
+        console.log(a <= b); // true
+
+        // 相等运算符
+        console.log("a = 10, c = '10', a==c", a == c); // true
+        // 严格相等运算符 -> 值和类型都判断
+        console.log("a = 10, c = '10', a===c" ,a === c); // false
+        // 不相等运算符
+        console.log(a != c); // false
+        // 严格不相等运算符 -> 值和类型都判断
+        console.log(a !== c); // true
+    </script>
+
+</body>
+</html>

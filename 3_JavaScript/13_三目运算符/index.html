@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三目运算符</title>
+</head>
+<body>
+    <h1>三目运算符</h1>
+    <p>三目运算符被视为 if...else... 的简写显示，可用于多种场合</p>
+    <img src="1.png" alt="" width="50%" border="1px">
+
+    <!-- <hr size="2px" width="60%" color="red" align="left">
+    <h3>下面是JavaScript的运算结果</h3> -->
+
+    <script>
+
+        // 判断是奇数还是偶数
+        var num = 10;
+
+        // if .. else ...
+        if(num % 2 == 0) {
+            console.log("num是偶数");
+        } else {
+            console.log("num是奇数");
+        }
+
+        // 重点-三目运算符
+        num % 2 === 0 ? console.log("num是偶数") : console.log("num是奇数");
+        // 最终写法
+        var result = num % 2 === 0 ? "偶数" : "奇数";
+        console.log(result);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch-语句</title>
+</head>
+<body>
+    <h1>switch-语句</h1>
+    <img src="1.png" alt="" width="60%" border="1px">
+
+    <script>
+
+        var day = 3;
+        switch(day) {
+            case 1:
+                console.log("星期一");
+                break;
+            case 2:
+                console.log("星期二");
+                break; 
+            case 3:
+                console.log("星期三");
+                break;
+            default:
+                console.log("输入错误");
+                break;      
+        }
+
+
+        // 如果不加break, 符合条件后的语句都会执行
+        var x = 2;
+        switch(x) {
+            case 1:
+                console.log("x==1")
+            case 2:
+                console.log("x==2")  // 会执行
+            case 3:
+                console.log("x==3")  // 会执行
+            default:
+                console.log("x值未知")  //会执行
+        }
+
+    </script>
+</body>
+</html>

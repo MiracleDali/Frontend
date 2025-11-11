@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件语句if-else</title>
+</head>
+<body>
+    <h1>条件语句if</h1>
+    <p>
+        需要注意的是，"布尔值由一个条件表达式产生", 必须放在圆括号呢
+    </p>
+
+    <script>
+        // if语句-else语句
+        var flag = false;
+        if (flag) {
+            console.log("flag为true");
+        } else {
+            console.log("flag为false");
+        }
+
+        // 1-7 :代表一周的7天
+        var day = 2;
+
+        if(day === 1) {
+            console.log('今天星期一');
+        } else if(day === 2) {
+            console.log('今天星期二');
+        } else if(day === 3) {
+            console.log("今天星期三");
+        } else if(day === 4) {
+            console.log("今天星期四");
+        } else if(day === 5) {
+            console.log("今天星期五");
+        } else if(day === 6) {
+            console.log("今天星期六");
+        } else if(day === 7) {
+            console.log("今天星期日");
+        } else {
+            console.log("输入的数字有误");
+        }
+
+        
+        // if-else 嵌套
+        var eat = true;
+        var food = "牛排";
+
+        if(eat) {
+            if(food === "牛排") {
+                console.log("今天吃牛排");
+            } else {
+                console.log("今天吃啥呢");
+            }
+        } else {
+            console.log('今天不吃饭');
+        }
+
+
+
+    </script>
+</body>
+</html>

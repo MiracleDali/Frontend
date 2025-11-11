@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for-循环语句</title>
+</head>
+<body>
+    
+    <h1>for-循环</h1>
+    <p>for循环语句可以指定循环的起点、终点、和终止条件</p>
+    <img src="1.png" alt="" border="1" width="60%">
+
+    <script>
+
+        // for循环
+        console.log("打印1-5")
+        for(var i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+
+        console.log("-------------------------")
+        console.log("输出小于5的数字")
+        var x = 5;
+        for(var i = 0; i < x; i++) {
+            console.log(i);
+        }
+
+
+        console.log("-------------------------")
+        console.log("输出1-100的和")
+        var sum = 0;
+        for(var i = 1; i <= 100; i++){
+            sum += i;
+        }
+        console.log(sum)
+
+
+        console.log("-------------------------")
+        console.log("输出10内的奇数-不能被2整除的数")
+        for(var i=1; i<=10; i++){
+            if(i%2 != 0){
+                console.log("奇数", i);
+            } 
+        }
+
+
+        console.log("-------------------------")
+        console.log("打印99乘法表")
+        for(var i=1; i<=9; i++){
+            document.write("</br>")
+            for(var j=1; j<=i; j++){
+                document.write(j, "*", i, "=", i*j, "&nbsp;&nbsp;&nbsp;&nbsp;");
+            }
+        }
+
+    </script>
+
+</body>
+</html>

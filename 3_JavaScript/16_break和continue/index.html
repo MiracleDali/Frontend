@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>break和continue语句</title>
+</head>
+<body>
+    <h1>break和continue语句</h1>
+    <img src="1.png" alt="" width="50%" border="1px">
+    <p>
+        break: 跳出，语句结束 <br>
+        continue: 跳出，终止本次循环，立即开始下次循环
+    </p>
+
+
+    <script>
+        // break
+        // 如果i的值=5， 则跳出不在执行
+        console.log("break");
+        for(var i=0; i<=100; i++){
+            if(i==5){
+                console.log("i现在等于5-使用 break 跳出循环",);
+                break;
+            }
+            console.log(i);
+        }
+
+        //continue    终止本次循环，立即开始下次循环
+        console.log("continue");
+        for(var i=0; i<=10; i++){
+            if(i==5){
+                console.log("i现在等于5-使用 continue 跳出本次循环");
+                continue;
+            }
+            console.log(i);
+        }
+
+    </script>
+
+</body>
+</html>

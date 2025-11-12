@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串</title>
+</head>
+<body>
+    <h1>字符串</h1>
+    <p>单引号内可以嵌套双引号，双引号内可以嵌套单引号</p>
+    <p>使用 反斜杠 【 \ 】 转义 来让单引号嵌套单引号，双引号嵌套双引号</p>
+    <p>使用length来获取字符串长度</p>
+
+
+    <script>
+
+        var str1 = "ha'ha'ha"
+        var str2 = 'HA"HA"HA' 
+        console.log(str1)
+        console.log(str2)
+
+
+        document.write("</br>")
+        // 输出带有嵌套引号的文本
+        document.write("没有\"燃尽\"就一直学习！！！")
+        document.write("</br>")
+        document.write('没有\'燃尽\'就一直学习！！！')
+
+
+        document.write("</br>")
+        //换行写法
+        var str3 = "字符串\
+                    换行使\
+                    用反斜杠"
+        document.write(str3)           
+        
+        
+        document.write("</br>")
+        //使用length来输出字符串的长度
+        var str4 = "使用length来获取字符串长度"
+        document.write("字符串长度", str4.length)
+
+        
+
+    </script>
+
+</body>
+</html>

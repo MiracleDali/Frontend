@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组</title>
+</head>
+<body>
+    <h1>数组_array</h1>
+    <p>
+        数组可以包含任何数据类型   <br>
+        可以使用下标赋值给数组    <br>
+        可以使用下标取值         <br>
+        length 属性可以获取数组的长度   <br>
+        数组越界返回undefined
+    </p>
+
+
+    <script>
+
+        var num = [1, 2, 3, 4, 5];  //直接定义
+        console.log(num);
+        console.log(num[10]);   // 数组越界返回undefined
+
+        var names = [];    // 声明数组
+        names[0] = "刘诗诗"   // 使用下标赋值
+        names[1] = "杨颖"
+        names[2] = "赵露思"
+        console.log(names);
+        console.log(names[0]);   // 使用下标取值
+
+        // 二维数组
+        var info = [20, "女", "上海", true, ['景甜', '陈小纭']];
+        console.log(info);
+        console.log(info[4][1]);  // 多维数组取值
+        console.log(info.length);  // 获取数组的长度
+
+
+    </script>
+
+</body>
+</html>

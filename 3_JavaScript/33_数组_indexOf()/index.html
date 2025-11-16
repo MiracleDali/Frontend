@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组_indexOf()</title>
+</head>
+<body>
+    <h1>数组_indexOf</h1>
+    <p>
+        indexOf('a'): 返回给定元素在数组中第一次出现的位置，如果没有出现则返回-1。   <br>
+        indexOf('a', 2): 从指定位置开始查找。   <br>
+    </p>
+    
+
+    <script>
+
+        var arr = [1,2,3,4,5]
+
+        // 判断数组是否存在 3 这个元素 // 如果不存在，则返回 -1
+        console.log(arr.indexOf(3))
+        if(arr.indexOf(3) > -1){
+            console.log('数组存在 3 这个元素')
+        }else{
+            console.log('数组不存在 3 这个元素')
+        }
+
+        console.log(arr.indexOf(3, 3))  // 3 这个元素，从第 3 个位置开始查找
+
+    </script>
+
+
+</body>
+</html>

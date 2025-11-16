@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>字符串_substr</title>
 </head>
 <body>
-    
+
+    <h1>字符串_substr</h1>
+    <p>
+        substr(5,5) : 截取字符串，从下标5开始，截取5个字符   <br>
+        substr(5) : 截取字符串，从下标5开始，截取到字符串末尾   <br>
+        substr(-6) : 截取字符串，从字符串末尾开始，截取6个字符
+    </p>
+
+
+    <script>
+        var name = "HelloWorld"
+        var result = name.substring(5,10)  //从下标5开始到下标10结束
+        console.log(result)
+
+        var result1 = name.substr(5,5)  // 从下标5开始截取5个字符
+        console.log(result1)
+
+        var result2 = name.substr(5)  // 从下标5开始截取到字符串末尾
+        console.log(result2)
+
+        var result3 = name.substr(-6) // 从字符串末尾开始截取6个字符
+        console.log(result3)
+
+        var result4 = name.substr(-6,3)  // 从字符串末尾开始截取3个字符
+        console.log(result4)
+
+        var result5 = name.substr(6,-3)  // 第二个值为负数打印空字符串
+        console.log(result5)
+
+    </script>
+
+
 </body>
 </html>

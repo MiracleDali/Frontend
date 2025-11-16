@@ -12,7 +12,7 @@
         concat() 方法用于连接字符串使用逗号隔开，返回一个新的字符串，不改变原字符串  <br>
         如果参数不是字符串，concat会将其转会成字符串在链接  <br>
         字符串拼接不需要使用 concat, 可以使用 + 号连接字符串 <br>
-        concat 不管什么类型直接合并成字符串
+        concat 不管什么类型直接合并成字符串      <br>
         加号是遇到数值类型做运算，遇到字符串做合并
     </p>
 
@@ -26,10 +26,10 @@
         var num = 100;    
 
         var result1 = str1.concat(str2, str3, num)  // concat 连接number类型的值会先把它转换成字符串在拼接
-        console.log(result1)
+        console.log(result1)   // helloworld!100
 
         var result2 = str1 + str2 + str3 + num;   // 这种更加简单，使用比较多（只能用来合并字符串）处理数值会相加
-        console.log(result2)
+        console.log(result2)   // helloworld!100
 
     </script>
 

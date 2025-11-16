@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组_join()</title>
+</head>
+<body>
+    <h1>数组_join()</h1>
+    <p>
+        join方法：以指定参数作为分隔符，将所有数组成员连接为一个字符串并返回，如果不提供参数，默认使用逗号分割  <br>
+        join方法返回的是一个字符串，而不是数组   <br>
+        null和undefined会被忽略,转换成空字符串  <br>
+    </p>
+
+
+    <script>
+
+        var arr = [1,2,3,4,5,6,null,undefined];
+        console.log(arr.join())
+        console.log(arr.join(''))
+        console.log(arr.join('|'))
+
+        // 字符串和数组可以使用 split() 和 join() 方法相互转换
+        var arr1 = ["hello", "world"]
+        console.log(arr1)    // ["hello", "world"]
+        var str = arr1.join(' ')
+        console.log(str)     // hello world
+        var arr2 = str.split(' ')
+        console.log(arr2)    // ["hello", "world"]
+
+
+    </script>
+    
+</body>
+</html>

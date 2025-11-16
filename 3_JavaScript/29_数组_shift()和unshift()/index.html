@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组_shift()-unshift()</title>
+</head>
+<body>
+    <h1>数组_shift()和unshift</h1>
+    <p>
+        shift():方法用于把数组的第一个元素从其中删除，并返回第一个元素的值。  <br>
+        unshift():方法用于向数组的开头添加一个或更多元素，并返回新的长度。
+    </p>
+
+
+    <script>
+
+        var names = ['张三', '李四', '王五', '赵六', '孙七'];
+        console.log(names);
+
+        // 使用shift()删除数组元素
+        var result = names.shift();  // 删除数组的第一个元素
+        console.log(result);
+        console.log(names);
+
+        // 使用shift(),清空数组
+        while(names.length > 0) {
+            var i = names.shift();
+            console.log(i);
+        }
+        console.log(names);
+
+
+        // unshift():方法用于向数组的开头添加一个或更多元素，并返回新的长度。
+        names.unshift('张三', '王五', '赵六');
+        console.log(names);
+
+
+    </script>
+    
+</body>
+</html>

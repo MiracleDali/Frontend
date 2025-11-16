@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array.isArray()</title>
+</head>
+<body>
+    <h1>isArray()</h1>
+    <p>
+        判断参数是不是数组，可以弥补typeOf()的兼容性  <br>
+        Array.isArray(value) 返回一个布尔值   true/false
+    </p>
+
+
+    <script>
+        var arr = [1,2,3];
+        console.log(Array.isArray(arr));  // true
+
+        console.log(Array.isArray([1,2,3]));  // true
+        console.log(Array.isArray({}));   // false
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数组_concat()</title>
+</head>
+<body>
+    <h1>数组concat</h1>
+    <p>
+        concat() 方法用于多个数组的合并。它将新数组成员，添加到原数组成员的后部，然后返回一个新数组。原数组不变  <br>
+        ['hello'].concat(['world'], ['!'])  <br>
+        // ["hello", "world", "!"]
+    </p>
+
+
+    <script>
+
+        var arr1 = ['刘亦菲', '章若楠'];
+        var arr2 = ['霉霉', '三吉彩花'];
+        var arr3 = ['毛晓彤', '猴哥'];
+
+        // 合并多个数组
+        console.log(arr1.concat(arr2, arr3));  // ["刘亦菲", "章若楠", "霉霉", "三吉彩花", "毛晓彤", "猴哥"]
+
+        var arr4 = [10];
+        console.log(arr4.concat(20, 30, 40));  // [10, 20, 30, 40]
+
+        console.log([1, 2].concat([4, 5, [6, 7]]))   // [1, 2, 4, 5, [6, 7]]
+
+    </script>
+
+
+</body>
+</html>

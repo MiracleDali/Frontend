@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串_split</title>
+</head>
+<body>
+    <h1>字符串_split</h1>
+    <p>
+        str.split(","): 按照给定规则，分割字符串--返回一个列表   <br>
+        str.split("")：如果给定规则为空，则返回字符串的每一个字符   <br>
+        str.split()： 不给规则，则返回整个字符串
+        name.split(",", 3)：第二个参数表示返回的数组长度  <br>
+    </p>
+
+
+    <script>
+
+        var str = "hi,hello,world"
+        console.log(str.split(","))   // ["hi", "hello", "world"]
+        console.log(str.split(""))   // ["h", "i", ",", "h", "e", "l", "l", "o", ",", "w", "o", "r", "l", "d"]
+        console.log(str.split())  // ["hi,hello,world"]  不给规则，则返回整个字符串
+
+        var name = "章若楠,刘亦菲,范冰冰,高圆圆,舒淇,汤唯"
+        console.log(name.split(",", 3))  // 第二个参数表示返回的数组长度
+
+
+    </script>
+</body>
+</html>

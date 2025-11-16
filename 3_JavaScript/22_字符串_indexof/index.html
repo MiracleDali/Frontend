@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>字符串_indexOf</title>
+</head>
+<body>
+    <h1>字符串_indexOf</h1>
+    <p>
+        如果indexOf()返回-1，则说明字符串中不存在该字符。
+        console.log(hello.indexOf('d'));    // 返回下标索引值  <br>
+        console.log(tangshi.indexOf('故乡', 10))  // 搜索字符串中"故乡"出现的位置，从索引值10开始搜索
+    </p>
+
+
+    <script>
+
+        var hello = "helloworld";
+        // 判断上述字符串中是否存在 e 字符
+        console.log(hello.indexOf('d'));    // 返回下标索引值
+
+        var tangshi = "窗前明月光，疑是地上霜，举头望明月，低头思故乡。";
+        console.log(tangshi.indexOf('举头'))  // 返回下标索引值
+        console.log(tangshi.indexOf('故乡', 10))  // 搜索字符串中"故乡"出现的位置，从索引值10开始搜索
+
+        if(tangshi.indexOf('李白') != -1){   // 判断字符串中是否存在"李白"  -1 表示不存在
+            console.log('字符串中存在"李白"');
+        }else{
+            console.log('字符串中不存在"李白"');
+        }
+
+    </script>
+    
+</body>
+</html>

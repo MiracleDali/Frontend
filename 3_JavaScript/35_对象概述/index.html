@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>对象</title>
+</head>
+<body>
+    <h1>对象</h1>
+    <p>
+        对象（object）是JavaScript的核心概念，是主要数据类型    <br>
+        对象是键值对的集合，键（key）是字符串，值（value）可以是任意数据类型
+    </p>
+
+
+    <script>
+
+        // 创建对象
+        var user = {
+            name: '张三',
+            age: 18,
+            sex: '男',
+            jobs: ['码农', '程序员', '前端开发', '后端开发'],
+            flag: true,
+            // function
+            get_name: function() {
+                console.log('对象内的function');
+            },
+            // 
+            container:{
+                frontEnd: ['HTML', 'CSS', 'JavaScript', 'Vue'],
+                backEnd: ['Python', 'MySQL', 'Node.js']
+            }
+        }
+
+
+        // 对象的读取: 对象名.Key  或 对象名['Key']
+        console.log(user.name);
+        console.log(user['age']);
+
+        for (var i=0; i<user.jobs.length; i++){
+            console.log(user.jobs[i])
+        }
+        
+        // 对象内的function
+        user.get_name();
+
+        // 链式调用
+        console.log(user.container.frontEnd[0]);
+        console.log(user.container.backEnd)
+
+    </script>
+    
+</body>
+</html>

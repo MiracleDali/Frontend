@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date对象</title>
+</head>
+<body>
+    <h1>Date对象</h1>
+    <p>
+        Date: JavaScript 原生时间库
+    </p>
+
+    <ul>
+        <li>getTime(): 返回实例距离 1970年1月1日00:00:00 的毫秒数</li>
+        <li>getDate(): 返回实例对象对应每个月的几号（从1开始）</li>
+        <li>getDay(): 返回星期几，星期日为0，星期一为1，以此类推</li>
+        <li>getYear(): 返回距离1900的年数</li>
+        <li>getFullYear(): 返回四位的年份</li>
+        <li>getMonth(): 返回月份（0表示1月，11表示12月）</li>
+        <li>getHours(): 返回小时（0-23）</li>
+        <li>getMilliseconds(): 返回毫秒（0-999）</li>
+        <li>getMinutes(): 返回分钟（0-59）</li>
+        <li>getSeconds(): 返回秒（0-59）</li>
+    </ul>
+
+
+    <script>
+
+        console.log(Date.now())
+
+        // 1763479858815
+        console.log(new Date(1763479858815));
+        console.log(new Date())
+
+
+        console.log(new Date().getFullYear())   // 年
+        console.log(new Date().getMonth() + 1)  // 月
+        console.log(new Date().getDate())  // 几号
+        console.log(new Date().getHours())  // 小时
+        console.log(new Date().getMinutes()) // 分钟
+        console.log(new Date().getSeconds()) // 秒
+        console.log(new Date().getDay())   // 星期几
+
+        // 2026-1-1 19:16:36
+        var year = new Date().getFullYear()
+        var month = new Date().getMonth() + 1
+        var date = new Date().getDate()
+        var hour = new Date().getHours()
+        var minute = new Date().getMinutes()
+        var second = new Date().getSeconds()
+        console.log(year + "-" + month + "-" + date + " " + hour + ":" + minute + ":" + second)
+
+
+        // 编写一个函数，获取本年剩余天数
+        function leftDays() {
+            var today = new Date();
+            var endYear = new Date(today.getFullYear(), 11, 31, 23, 59, 59, 999);
+            var msperDay = 24 * 60 * 60 * 1000;
+            var result = (endYear.getTime() - today.getTime()) / msperDay;
+            console.log(Math.floor(result));
+        }
+        leftDays();
+
+
+    </script>
+    
+</body>
+</html>

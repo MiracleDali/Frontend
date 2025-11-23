@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>41_Element对象属性</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+        }
+        .box1{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Element对象属性</h1>
+    
+    <div class="box" id="root">Hello</div>
+
+
+    <script>
+        var root = document.getElementById('root');
+        // 修改已经存在的id属性
+        root.id = "roots";
+
+        // 获取class属性
+        console.log(root.className);
+        // 修改class属性
+        root.className = "box box1";
+
+        // 添加class属性
+        console.log(root.classList.add("mybox"));
+        // 删除class属性
+        console.log(root.classList.remove("box"));
+        // 判断class属性
+        if(root.classList.contains("box1")){
+            console.log("box1存在");
+        }
+
+        // innerHTML和innerText的区别 ： innerHTML可以打印标签内容，innerText只能打印文本内容
+        // 打印文本内容
+        console.log(root.innerHTML);
+        // console.log(root.innerText);
+        // 修改文本内容
+        root.innerHTML = "Hello World";
+        // root.innerText = "Hello World";
+
+
+        console.log(root);
+        
+        
+    </script>
+
+</body>
+</html>

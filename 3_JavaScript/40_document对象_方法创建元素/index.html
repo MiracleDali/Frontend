@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40_document对象_方法创建元素</title>
+</head>
+<body>
+    <h1>document 创建元素</h1>
+    <ul>
+        <li>createElement</li>
+        <li>createTextNode</li>
+        <li>createAttribute</li>
+    </ul>
+
+
+    <div id="container"></div>
+
+
+
+    <script>
+        // 创建标签
+        var text = document.createElement('p');  // 输出 -> <p></p>
+        // 创建文本
+        var content = document.createTextNode('hello world');  // 输出 -> hello world
+        // 创建属性
+        var id = document.createAttribute('id');  // 输出 -> [id: ]
+        // 添加属性值
+        id.value = 'text'   // 输出 -> [id: "id"]
+        // appendChild 将内容或者子元素(就是上面的文本)放到容器中,
+        text.appendChild(content);   // 输出 -> <p>hello world</p>
+        // 将属性添加到标签中
+        text.setAttributeNode(id);     // 输出 -> <p id="text">hello world</p>
+        // 输出 -> <p id="text">hello world</p>
+        console.log(text);
+
+
+        // 添加到页面
+        var container = document.getElementById('container');
+        container.appendChild(text);
+
+    </script>
+    
+</body>
+</html>

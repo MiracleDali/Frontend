@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>39_document对象_方法获取元素</title>
+</head>
+<body>
+    <h1>39_document对象_方法获取元素</h1>
+
+    <div>Hello1</div>
+    <div>Hello2</div>
+
+    <p class="text">hello_P</p>
+
+    <form name="login"></form>
+
+    <div id="root">哈哈哈</div>
+
+    <div class="nav">nav1</div>
+    <div class="nav">nav2</div>
+
+
+
+    <script>
+
+        // 搜索符合条件的标签名，返回符合条件的元素
+        var div1 = document.getElementsByTagName("div")[0];
+        // 修改元素
+        div1.innerHTML = "Hello World";
+        console.log(div1);
+
+
+        // 搜索符合条件的id名称，返回符合条件的元素
+        var root = document.getElementById("root");
+        console.log(root);
+
+
+        // 通过class的名称获取元素
+        var text = document.getElementsByClassName("text")[0];
+        console.log(text);
+
+
+        // 通过选择器获取元素-获取单个元素
+        var nav = document.querySelector(".nav");
+        console.log(nav);
+
+
+        // 通过选择器获取元素-获取多个元素
+        var navs = document.querySelectorAll(".nav")[1];
+        console.log(navs); 
+
+
+
+
+        
+
+        // 通过name属性获取元素-使用率极低
+        var name1 = document.getElementsByName("login");
+        console.log(name1);
+
+
+
+    </script>
+    
+</body>
+</html>

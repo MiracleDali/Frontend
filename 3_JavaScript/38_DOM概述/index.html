@@ -8,10 +8,11 @@
 <body>
     <h1>DOM概述</h1>
     <p>
+        简单理解就是 JS 操作页面的接口  <br>
         DOM(Document Object Model) 作用是将网页转换为一个JavaScript对象
     </p>
     <ul>
-        <p>DOM节点的七种类型</p>
+        <p style="font-size: 20px; color: rgb(3, 34, 208);">DOM节点的七种类型</p>
         <li>Document：整个文档树的顶层节点</li>
         <li>DocumentType：doctype标签</li>
         <li>Element：网页的各种HTML元素</li>
@@ -24,8 +25,13 @@
 
 
     <script>
+        // 浏览器原生提供document节点，代表整个文档
+        console.log(document)
 
-
+        // nodeType属性：返回节点类型
+        if(document.nodeType === 9){
+            console.log("顶层节点")
+        }
     </script>
     
 </body>

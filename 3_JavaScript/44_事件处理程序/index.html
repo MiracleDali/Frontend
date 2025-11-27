@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件处理程序</title>
+</head>
+<body>
+
+    <h3>HTML_事件</h3>
+    <!-- 缺点html和js没有分离 -->
+    <button onclick="clickHandle()">HTML_事件_按钮</button>
+
+
+    <h3>DOM0_事件</h3>
+    <!-- 优点html和js分离， 缺点：会被覆盖 -->
+    <button id="btn">DOM0_事件_按钮</button>
+
+
+    <h3>DOM2_事件</h3>
+    <!-- 优点html和js分离，不会被覆盖。缺点写起来稍微麻烦 -->
+    <button id="btn2">DOM2_事件_按钮</button>
+
+
+    <script>
+        // 缺点html和js没有分离
+        function clickHandle() {
+            console.log('点击了HTML_事件_按钮')
+        }
+
+
+        // 优点html和js分离， 缺点：会被覆盖
+        var btn = document.getElementById('btn')
+        btn.onclick = function() {
+            console.log('点击了DOM0_事件_按钮')
+        }
+        btn.onclick = function() {
+            console.log('点击了DOM0_事件_按钮2')
+        }
+
+
+        // 优点html和js分离，不会被覆盖。缺点写起来稍微麻烦
+        var btn2 = document.getElementById('btn2')
+        btn2.addEventListener('click', function() {
+            console.log('点击了DOM2_事件_按钮')
+        })
+        btn2.addEventListener('click', function() {
+            console.log('点击了DOM2_事件_按钮2')
+        })
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件类型之鼠标事件</title>
+</head>
+<body>
+    <h1>事件类型之鼠标事件</h1>
+    <img src="1.png" alt="" border="1px" width="45%">
+    <br><br><br>
+
+    <button id="btn1">单击</button>
+    <button id="btn2">双击</button>
+    <button id="btn3">鼠标按下</button>
+    <button id="btn4">鼠标抬起</button>
+
+    <br><br>
+
+    <button id="btn5">鼠标移动</button>   <br>
+    <button id="btn6">鼠标移入</button>   <br>
+    <button id="btn7">鼠标移出</button>   <br>
+    <button id="btn8">鼠标移入2</button>  <br>
+    <button id="btn9">鼠标移出2</button>
+
+    <br><br> 
+
+    <button id="btn10">鼠标滚轮</button> 
+
+    
+
+    
+    <script>
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = function(){
+            console.log('鼠标单击');
+        }
+
+        var btn2 = document.getElementById('btn2');
+        btn2.ondblclick = function(){
+            console.log('鼠标双击');
+        }
+
+        var btn3 = document.getElementById('btn3');
+        btn3.onmousedown = function(){
+            console.log('鼠标按下');
+        }
+
+        var btn4 = document.getElementById('btn4');
+        btn4.onmouseup = function(){
+            console.log('鼠标抬起');
+        }
+
+        var btn5 = document.getElementById('btn5');
+        btn5.onmousemove = function(){
+            console.log('鼠标移动');
+        }
+
+        var btn6 = document.getElementById('btn6');
+        btn6.onmouseenter = function(){
+            console.log('鼠标移入');
+        }
+
+        var btn7 = document.getElementById('btn7');
+        btn7.onmouseleave = function(){
+            console.log('鼠标移出');
+        }
+
+        var btn8 = document.getElementById('btn8');
+        btn8.onmouseover = function(){
+            console.log('鼠标移入2');
+        }
+
+        var btn9 = document.getElementById('btn9');
+        btn9.onmouseout = function(){
+            console.log('鼠标移出2');
+        }
+
+        var btn10 = document.getElementById('btn10');
+        btn10.onmousewheel = function(){
+            console.log('鼠标滚轮');
+        }
+
+    </script>
+</body>
+</html>

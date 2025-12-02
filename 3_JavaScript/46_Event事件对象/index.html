@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event事件对象</title>
+    <style>
+        .example{
+            margin-left: 20px;
+            margin-bottom: 30px; 
+        }
+        a{
+            display: block;
+            margin-top: 12px;
+        }
+        .root{
+            width: 200px;
+            height: 200px;
+            background-color: #999;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="example">
+        <h1 style="color: chocolate;">Event事件对象</h1>
+        <p>事件发生后，会产生一个事件对象，作为参数传给监听函数</p>
+        <h3>Event对象属性</h3>
+        <ul>
+            <li>event.Target: 返回事件当前所在的节点,获取元素html部分也可进行修改</li>
+            <li>event.type: 事件类型</li>
+        </ul>
+        <h3>Event对象方法</h3>
+        <ul>
+            <li>event.preventDefault(): 阻止默认行为</li> 
+            <li>event.stopPropagation(): 阻止事件冒泡</li>
+        </ul>
+    </div>
+
+    <hr size="1" width="50%" align="left">
+    <hr size="1" width="50%" align="left" style="margin-bottom: 20px;">
+
+    <div class="example">
+        <button id="btn1">按钮1</button>
+        <br>
+        <a href="https://baidu.com" id="it">open_baidu-阻止元素默认行为</a>
+    </div>
+
+    <hr size="1" width="50%" align="left">
+    <hr size="1" width="50%" align="left" style="margin-bottom: 20px;">
+
+    <div class="root" id="root">
+        root
+        <div class="box" id="box">box</div>
+    </div>
+
+
+    <script>
+
+        var btn1 = document.getElementById('btn1');
+        btn1.onclick = function(event){
+            console.log(event.type);   // 获取给元素添加的事件类型
+            console.log(event.target);  // 获取元素html部分
+            event.target.innerHTML = '点击了按钮1';   // 修改元素html部分
+        }
+
+        var it = document.getElementById('it');
+        it.onclick = function(event){
+            event.preventDefault();   // 阻止默认行为  a 标签的默认行为是打开链接
+            console.log("点击了,百度链接");
+        }
+
+
+        var root = document.getElementById('root');
+        root.onclick = function(event){
+            console.log('root');
+        }
+        var box = document.getElementById('box');
+        box.onclick = function(event){
+            event.stopPropagation();  // 阻止事件冒泡-不会触发父元素事件
+            console.log('box');
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件类型之键盘类型</title>
+    <style>
+        h1{
+            font-size: 25px;
+            color: rgb(207, 123, 13);
+        }
+    </style>
+</head>
+<body>
+    <h1>事件类型之键盘类型</h1>
+    <span>键盘事件由用户打击键盘触发</span>
+    <ul>
+        <li>keydown：按下键盘时触发</li>
+        <li>kyepress：事件-数字和字母是有值的-[Ctrl、Alt、Shift、Meat]这些不会触发</li>
+        <li>keyup：抬起键盘时触发</li>
+    </ul>
+
+    <hr size="1" width="50%" align="left" color="red">
+    <hr size="1" width="50%" align="left" color="red" style="margin-bottom: 20px;">
+
+    <!-- 输入框 -->
+    <input type="text" id="down" placeholder="onkeydown-框">
+    <br>
+    <input type="text" id="keyup" placeholder="onkeyup-框">
+    <br>
+    <input type="text" id="press" placeholder="onkeypress-框">
+    <br></br>
+    <input type="text" id="keyCode" placeholder="keyCode-框">
+
+
+    <script>
+
+        var down = document.getElementById("down");
+        down.onkeydown = function(event){
+            console.log(event.target.value);    // 获取输入框的值
+        }
+
+        var keyup = document.getElementById("keyup");
+        keyup.onkeyup = function(event){
+            console.log(event.target.value);     // 获取输入框的值
+        }
+
+        var press = document.getElementById("press");
+        press.onkeypress = function(event){
+            console.log(event.target.value);
+        }
+
+        // keyCode-获取按键的ASCII码
+        var keyCode = document.getElementById("keyCode")
+        keyCode.onkeydown = function(event){
+            console.log(event.keyCode);
+            if(event.keyCode == 13){
+                console.log("按下了回车键-开始后续流程");
+            }
+        }
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

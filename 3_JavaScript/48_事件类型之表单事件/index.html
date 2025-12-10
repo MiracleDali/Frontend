@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单事件</title>
+    <style>
+        h1, h3{
+            color: chocolate;
+        }
+        span{
+            font-size: 20px;
+        }
+        img{
+            width: 700px;
+            border: 1px solid rgba(255, 247, 0, 0.163);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        input{
+            width: 350px;
+            margin-bottom: 10px; 
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-left: 20px;">
+        <h1>事件类型之表单事件</h1>
+        <span>表单事件是在使用表单元素及输入框元素可以监听的一系列事件</span>
+        <ul>
+            <li>input:事件</li>
+            <li>select:事件</li>
+            <li>Change:事件</li>
+            <li>reset:事件</li>
+            <li>submit:事件</li>
+        </ul>
+        <hr color="red" width="50%" align="left" size="1px"></hr>
+
+        <h3>input:事件</h3>
+        <input type="text" id="inputEvent"  placeholder="input:事件">
+        <br>
+        <img src="1.png" alt="">
+        <!-- <hr color="red" width="50%" align="left" size="1px"></hr> -->
+
+        <h3>Change:事件</h3>
+        <input type="text" id="changeEvent"  placeholder="Change:事件">
+        <br>
+        <img src="3.png" alt="">
+        <!-- <hr color="red" width="50%" align="left" size="1px"></hr> -->
+
+        <h3>reset&submit:事件</h3>
+        <form id="myForm" onsubmit="submitEvent">
+            <input type="text" name="usernamen"  placeholder="reset&submit:事件">
+            <button id="resetBtn">reset</button>
+            <button>submit</button>
+        </form>
+        <br>
+        <img src="4.png" alt="">
+        <!-- <hr color="red" width="50%" align="left" size="1px"></hr> -->
+
+        <h3>select:事件</h3>
+        <input type="text" id="selectEvent"  placeholder="select:事件">
+        <br>
+        <img src="2.png" alt="">
+        <!-- <hr color="red" width="50%" align="left" size="1px"></hr> -->
+    </div>
+    
+
+
+    <script>
+        // input:事件
+        var inputEvent = document.getElementById('inputEvent');
+        inputEvent.oninput = function(e){
+            console.log('input事件:', inputEvent.value);
+        };
+
+        // change:事件  失去焦点和回车的时候触发
+        var changeEvent = document.getElementById('changeEvent');
+        changeEvent.onchange = function(e){
+            console.log('change事件:', e.target.value);
+        };
+
+        // reset:事件
+        var resetBtn = document.getElementById('resetBtn');
+        var myForm = document.getElementById('myForm');
+        resetBtn.onclick = function(){
+            myForm.reset();  // 触发在表单上 清空表单
+        }
+        // submit:事件
+        function submitEvent(){
+            console.log('submit事件');
+        }
+
+        // select:事件
+        var selectEvent = document.getElementById('selectEvent');
+        selectEvent.onselect = function(e){
+            console.log('select事件: 选中了');
+        };
+    </script>
+
+
+</body>
+</html>

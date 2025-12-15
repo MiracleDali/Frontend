@@ -25,6 +25,35 @@
 <body>
 
     <h1>事件代理事件委托</h1>
+    <span>使用父元素监听每一个子元素</span>
+
+    <ul id="list">
+        <li>列表1</li>
+        <li>列表2</li>
+        <p>这是p标签</p>
+    </ul>
+
+
+    <script>
+
+        const list = document.getElementById('list')
+        list.onclick = function(){
+            console.log("点击了列表")
+        }
+
+        list.addEventListener('click', function(e){
+            console.log("点击了列表")
+        })
+
+        list.addEventListener('click', function(evect){
+            console.log(evect.target.tagName)
+            if (evect.target.tagName === 'LI'){
+                console.log("点击了LI标签")
+                console.log(evect.target.innerHTML)
+            }
+        })
+
+    </script>
     
 </body>
 </html>

@@ -77,16 +77,23 @@
 
     <img src="1.png" alt="">
 
+    <br><br>
+    <p>刷新页面后三秒内点击，控制台将不再打印对应内容</p>
+    <button onclick="clearTimeoutFunc()">取消定时器</button>
+
 
     <script>
 
         const timer = setTimeout(function(){
-            console.log('三秒后执行')
-        },3000)
+            console.log('两秒后执行')
+        },2000)
 
         // 取消定时器，定时器函数就不再执行了
-        clearTimeout(timer)
-
+        const clearTimeoutFunc = function() {
+            clearTimeout(timer)
+            console.log('已取消定时器')
+        }
+        
 
         const name = 'iwen'
         const user = {

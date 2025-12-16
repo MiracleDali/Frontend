@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+    <style>
+        h1, h3{
+            color: chocolate;
+        }
+        span{
+            font-size: 20px;
+
+        }
+        img{
+            width: 700px;
+            border: 1px solid rgba(255, 247, 0, 0.163);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* 提示框样式 */
+        .tip-box {
+            background-color: #f0f8ff;
+            border-left: 4px solid #4CAF50;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: relative;
+            width: 800px;
+        }
+        
+        .tip-title {
+            color: #333;
+            font-weight: bold;
+            font-size: 16px;
+            margin: 0 0 10px 0;
+        }
+        
+        .tip-content {
+            color: #333;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+        
+        .highlight {
+            background-color: #fff8e1;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-family: monospace;
+            margin: 0 2px;
+        }
+        
+        .code {
+            background-color: #e8f5e8;
+            padding: 2px 4px;
+            border-radius: 2px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>setTimeout</h1>
+    <p>注：setTimeout 单位是毫秒</p>
+
+    <!-- 提示框 -->
+    <div class="tip-box">
+        <h3 class="tip-title">温馨提示</h3>
+        <div class="tip-content">
+            还有一个需要注意的地方，如果回调函数是对象的方法，那么 
+            <span class="code">setTimeout</span> 使得方法内部的 
+            <span class="highlight">this</span> 关键字指向全局环境，而不是定义时所在的那个对象
+        </div>
+    </div>
+
+    <img src="1.png" alt="">
+
+
+    <script>
+
+        const timer = setTimeout(function(){
+            console.log('三秒后执行')
+        },3000)
+
+        // 取消定时器，定时器函数就不再执行了
+        clearTimeout(timer)
+
+
+        const name = 'iwen'
+        const user = {
+            name: 'liouyifei',
+            getname:function(){
+                // this 永远执行当前调用者
+                console.log(this.name)
+            }
+        }
+        user.getname()
+
+
+        const age = 18
+        const user2 = {
+            age: 19,
+            getage:function(){
+                // 定时器函数中的 this 默认指向全局环境 
+                // 使用 that 存储 this
+                var that = this
+                setTimeout(function(){
+                    console.log(that.age)
+                },1000)
+            }
+        }
+        user2.getage();
+
+
+    </script>
+    
+</body>
+</html>

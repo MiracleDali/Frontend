@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>节流</title>
+<style>
+        div{
+            height: 300px;
+            width: 350px;
+            margin-top: 20px;
+            background-color:coral;
+            border-radius: 10px;
+        }
+        p{
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>节流</h1>
+    <span>节流严格算起来应该是性能优化的知识，但实际上遇到的频率相当高，处理不当或者放任不管就容易引起浏览器卡死</span>
+    <br>
+    <span>节流定义：是在一定时间后执行不需要等用户停止操作</span>
+
+    <div><p>test-节流</p></div>
+    <div><p>test-节流</p></div>
+    <div><p>test-节流</p></div>
+    <div><p>test-节流</p></div>
+    <div><p>test-节流</p></div>
+    <div><p>test-节流</p></div>
+
+
+    <script>
+
+        //节流
+        function throttle(fn, delay){
+            var valid = true;
+            return function(){
+                if(!valid){
+                    return
+                }
+                valid = false
+                setTimeout(function(){
+                    fn()
+                    valid = true
+                }, delay)
+            }
+        }
+
+        // 滚动事件
+        window.onscroll = throttle(scrollHandle, 2000)
+        function scrollHandle(){
+            console.log('页面滚动了');
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+        
+    </script>
+    
+</body>
+</html>

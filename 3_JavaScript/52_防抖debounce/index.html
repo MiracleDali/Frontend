@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防抖 debounce</title>
+    <style>
+        div{
+            height: 300px;
+            width: 350px;
+            margin-top: 20px;
+            background-color: aqua;
+            border-radius: 10px;
+        }
+        p{
+            text-align: center;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <h1>防抖</h1>
+    <span>防抖严格算起来应该是性能优化的知识，但实际上遇到的频率相当高，处理不当或者放任不管就容易引起浏览器卡死</span>
+    <br>
+    <span>防抖定义：防抖就是让某个时间期限内，事件处理函数只执行一次</span>
+
+    <div><p>test</p></div>
+    <div><p>test</p></div>
+    <div><p>test</p></div>
+    <div><p>test</p></div>
+    <div><p>test</p></div>
+    <div><p>test</p></div>
+
+
+    <script>
+
+        //防抖
+        function debounce(fn, delay){
+            var timer = null;
+            return function(){
+                if(timer){
+                    clearTimeout(timer)
+                }
+                timer = setTimeout(fn, delay)
+            }
+        }
+
+        // 滚动事件
+        window.onscroll = debounce(scrollHandle, 500)
+        function scrollHandle(){
+            console.log('页面滚动了');
+            var scrollTop = document.documentElement.scrollTop;
+            console.log(scrollTop);
+        }
+        
+    </script>
+    
+</body>
+</html>

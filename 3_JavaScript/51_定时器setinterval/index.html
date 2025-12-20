@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setinterval</title>
+    <style>
+        h1, h3{
+            color: chocolate;
+        }
+        span{
+            font-size: 20px;
+
+        }
+        img{
+            width: 700px;
+            border: 1px solid rgba(255, 247, 0, 0.163);
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+        }
+        #spmeDiv{
+            margin-top: 20px;
+            width: 100px;
+            height: 100px;
+            background: red;
+            opacity: 0.2;       /* 透明度 */
+        }
+    </style>
+</head>
+<body>
+    <h1>setinterval</h1>
+    <span>间隔执行类型无限循环</span>
+
+    <!-- 动画效果 -->
+    <div id="spmeDiv"></div> 
+
+
+    <script>
+
+        // var i = 0;
+        // setInterval(function(){
+        //     i++
+        //     console.log(i); 
+        // }, 1000)
+
+
+        // 实现动画效果
+        var div = document.getElementById('spmeDiv');
+            // 透明度: opacity: 取值范围0-1
+        var opacity = 1;
+        var fade = setInterval(function(){
+            if(opacity > 0){
+                opacity -= 0.05
+                div.style.opacity = opacity
+            }else{
+                clearInterval(fade)
+            }
+        }, 50)
+
+    </script>
+    
+</body>
+</html>

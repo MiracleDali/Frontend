@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03_Babel转码器</title>
+    <style>
+        img{
+            width: 38%;
+            border: 1px solid rgb(27, 21, 154);
+        }
+        span{
+            color: rgb(188, 142, 4);
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Babel转码器</h1>
+    <p>Babel 是一个 JavaScript 编译器，主要用于将 ES6+ 语法转换为向后兼容的 JavaScript 代码，使现代 JavaScript 代码能够在旧版浏览器或环境中正常运行。</p>
+    <br>
+    <hr size="1" width="50%" align="left" color="red" style="margin-bottom: 20px;">
+    <img src="1.png" alt="">
+
+    <br>
+    <ul>
+        <li>
+            <span>安装Babel在项目的根目录下</span>
+            <br>
+            <code>
+                npm install --save-dev @babel/core @babel/cli
+            </code>
+        </li>
+
+        <li>
+            <span>配置文件 .babelrc</span>
+            <br>
+            <img src="2.png" alt="">
+        </li>
+
+        <li>
+            <span>转码规则-presets字段转码规则, 官方提供以下的规则集，根据需要安装</span>
+            <br>
+            <code>
+                npm install --save-dev @babel/preset-env
+            </code>
+            </br>
+        </li>
+        <li>
+            <span>将规则加入到 .babelrc</span>
+            <br>
+            <code>
+                {
+                    "presets": ["@babel/env"],
+                    "plugins": []
+                }
+            </code>
+            </br>
+        </li>
+    </ul>
+
+    <h2>安装 Babel 命令行转码</h2>
+    <code>npm install --save-dev @babel/cli</code>
+    <br>
+    <img src="3.png" alt="">
+
+    <h2>完整示例</h2>
+    <img src="4.png" alt="" >
+    
+</body>
+</html>

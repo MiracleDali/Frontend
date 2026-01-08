@@ -30,6 +30,14 @@
             <br>
             <img src="1.png" alt="">
         </li>
+        <li>
+            let关键字：不会变量提升
+        </li>
+        <li>
+            let关键字：不能重复声明
+            <br>
+            <img src="2.png" alt=""></img>
+        </li>
     </ul>
 
 
@@ -73,6 +81,37 @@
         for(let i=20; i<25; i++){
             console.log(i);
         }
+
+
+        console.log('-------------')
+        // 因为 var 声明的变量 i 具有函数作用域，在循环结束后 i 的值为 10，而数组 e 中的函数形成了闭包，保存了对同一个变量 i 的引用，所以当 e[6]() 执行时输出的是 10。
+        var e = [];
+        for (var i = 0; i < 10; i++) {
+            e[i] = function () {
+                console.log(i);
+            }
+        }
+        // console.log(e);
+        e[6]();  // 10
+
+
+        // let版本: 每个函数捕获各自循环时的 i 值（块级作用域），输出对应的索引值 6
+        let f = [];
+        for (let i = 0; i < 10; i++) {
+            f[i] = function () {
+                console.log(i);
+            }
+        }
+        // console.log(f);
+        f[6]();
+       
+
+        console.log(aa)  // 变量提升（Hoisting）现象  输出 undefined，而不会报错
+        var aa = 10;
+
+        // let 声明的变量不会像 var 那样被提升到作用域顶部 暂时性死区: 从作用域开始到 let 声明完成之前，访问变量 bb 会进入"暂时性死区"
+        console.log(bb)  
+        let bb = 10;
 
 
 

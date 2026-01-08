@@ -9,6 +9,10 @@
         h1 {
             color: rgb(207, 157, 20);
         }
+        img {
+            width: 50%;
+            border: 1px solid rgb(207, 157, 20);
+        }
     </style>
 
 </head>
@@ -19,6 +23,62 @@
         let 声明的变量，只在 let 命令所在的代码块内有效。
         let 声明的变量，必须先声明后使用
     </span>
+    <ul>
+        <li>var关键字：函数级别的作用域</li>
+        <li>-------</li>
+        <li>let关键字：块级作用域 可以理解为只在花括号{}内生效
+            <br>
+            <img src="1.png" alt="">
+        </li>
+    </ul>
+
+
+
+    <script>
+
+        // var 的作域是函数级别
+        if(true){
+            var a = 1;
+        }
+        console.log(a);
+        // 因为var 是函数级别，所以b是函数作用域的变量 在函数外面调用 var 定义的变量 会报错
+        // 下面注释掉的这个调用会报错
+        /*
+        function fn(){
+            var b = 2;
+        }
+        fn();
+        console.log(b);
+        */
+
+
+        // let 的作域是块级作用域
+        if(true){
+            let c = 3;
+            console.log(c);
+        }
+        // let 作域是块级作用域，是块级作用域的变量 在函数外面调用 let 块级作用域的变量 会报错
+        // 下面注释掉的这个调用会报错
+        /*
+        if(true){
+            let d = 4;
+        }
+        console.log(d);
+        */
+
+        console.log('因为let 作域是块级作用域，所以可以在多个循环中重复使用同一个变量名他们不会冲突')
+        for(let i=10; i<15; i++){
+            console.log(i);
+        }
+        for(let i=20; i<25; i++){
+            console.log(i);
+        }
+
+
+
+        
+
+    </script>
     
 
 </body>

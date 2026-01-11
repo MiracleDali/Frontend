@@ -15,6 +15,33 @@
     </style>
 </head>
 <body>
+
+    <h1>对象的解构赋值</h1>
+    <p>对象的属性没有持续，变量必须与属性同名，才能取到正确的值</p>
+    <img src="1.png" alt="">
+
+
+    <script>
+
+        // 对象的解构赋值
+        var user = {
+            name: '张三',
+            sex: '男',
+            age: 18
+        }
+        const { name, age } = user;
+        console.log(name, age);
+
+        console.log('-----------------')
+        // 函数参数的解构赋值
+        const { log } = console;
+        log('hello world');
+        const { abs,ceil,floor,random } = Math;
+        log(random())
+
+         
+
+    </script>
     
 </body>
 </html>

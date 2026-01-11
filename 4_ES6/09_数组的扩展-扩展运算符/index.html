@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_数组的扩展-扩展运算符</title>
+    <style>
+        h1 {
+            color: #bf8d21;
+        }
+        h2 {
+            color: #c2922a;
+        }
+        img {
+            width: 50%;
+            border: 1px solid rgb(207, 157, 20);
+        }
+        div {
+            width: 700px;
+            border: 1px solid rgb(233, 214, 160);
+            padding: 15px;
+            background-color: rgb(255, 253, 247);
+        }
+        code {
+            font-size: large;
+            border-left: #8b5e09 10px solid;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>数组的扩展-扩展运算符</h1>
+    <p>扩展运算符是三个点（...）。将一个数组转换为用逗号分隔的参数序列</p>
+    <div>
+        <code>var arr = [1, 2, 3, 4, 5]</code> <br>
+        <code>console.log(...arr)    // 1 2 3 4 5</code>
+    </div>
+    <p>合并数组</p>
+    <div>
+        <code>var arr1 = [1, 2, 3]</code> <br>
+        <code>var arr2 = [4, 5, 6]</code> <br>
+        <code>var arr3 = [...arr1, ...arr2]</code> <br>
+        <code>console.log(arr3)  // [1, 2, 3, 4, 5, 6]</code>
+    </div>
+
+
+
+    <script>
+        // 使用 扩展运算符 ... 三个点 
+        var arr = [1, 2, 3, 4, 5]
+        console.log(...arr)    // 1 2 3 4 5
+        // 类似下面的循环
+        for(let i=0; i<arr.length; i++){
+            console.log(arr[i])
+        }
+
+        // 求数组中的最大值
+        var b = [11, 22, 33, 44, 55]
+        var max = Math.max(...b)
+        console.log(max)
+
+        // 合并数组
+        var arr1 = [1, 2, 3, 4, 5]
+        var arr2 = [6, 7, 8, 9, 10]
+        var arr3 = [...arr1, ...arr2]  // ES6 扩展运算符
+        console.log(arr3)
+
+        var arr4 = arr1.concat(arr2, arr3)  // ES5 拼接数组
+        console.log(arr4)
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07_字符串扩展</title>
+    <style>
+        h1 {
+            color: #bf8d21;
+        }
+        img {
+            width: 50%;
+            border: 1px solid rgb(207, 157, 20);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>字符串扩展</h1>
+    <h2>字符串遍历器接口</h2>
+    <p>for...of 循环遍历</p>
+    <h2>模板字符串</h2>
+    <p>模板字符串是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量</p>
+
+
+    <script>
+
+        console.log("\u0061")
+        console.log("\u{61}")
+
+
+        console.log('-----------------')
+        // 迭代字符串 和下面的效果一样
+        var str = "hello"
+        for(let i of str){
+        console.log(i);
+        }
+
+        for(let i=0; i<str.length; i++){
+            console.log(str[i])
+        }
+
+
+        console.log('-----------------')
+        // 创建一个动态A标签
+        var href = "http://www.baidu.com";
+        var text = "百度一下";
+        // 普通方法
+        var baidu = "<a href='"+ href +"'>"+ text +"</a>"
+        console.log(baidu)
+
+        // 模板字符串 `` ${}  方便
+        var baidu1 = `<a href="${href}">${text}</a>`
+        console.log(baidu1)
+
+
+    </script>
+    
+</body>
+</html>

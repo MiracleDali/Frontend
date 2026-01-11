@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08_字符串的新增方法</title>
+    <style>
+        h1 {
+            color: #bf8d21;
+        }
+        img {
+            width: 50%;
+            border: 1px solid rgb(207, 157, 20);
+        }
+        div {
+            width: 700px;
+            border: 1px solid rgb(233, 214, 160);
+            padding: 15px;
+            background-color: rgb(255, 253, 247);
+        }
+        code {
+            font-size: large;
+            border-left: #8b5e09 10px solid;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>字符串的新增方法</h1>
+    <p>includes() 包含 【返回布尔值，表示是否找到了参数字符串】</p>
+    <p>startsWith() 以...开头 【返回布尔值，表示参数字符串是否在源字符串的头部</p>
+    <p>endsWith() 以...结尾 【返回布尔值，表示参数字符串是否在源字符串的尾部</p>
+    <div id="codeview">
+        <code id="code">let s = 'hello world'; </code> <br>
+        <code id="code">console.log(s.includes('world'))    // true  </code> <br>
+        <code id="code">console.log(s.startsWith('h'))       // true   </code> <br>
+        <code id="code">console.log(s.endsWith('d'))        // true </code> <br>
+    </div>
+
+    <p>这三个方法都支持第二个参数，表示开始搜索的位置</p>
+    <div id="codeview">
+        <code id="code">let s = 'hello world'; </code> <br>
+        <code id="code">console.log(s.includes('world', 5))  // true  </code> <br>
+        <code id="code">console.log(s.startsWith('h', 1))    // false   </code> <br>
+        <code id="code">console.log(s.endsWith('d', 10))     // false </code> <br>
+    </div>
+
+    <p>repeat() 方法返回一个新字符串，表示将源字符串重复N次</p>
+    <div>
+        <code>var x = "qwe"</code> <br>
+        <code>console.log(x.repeat(3))</code> <br>
+        <code>console.log(x.repeat(0))  // 空字符串</code>
+    </div>
+
+    <p>padStart(), padEnd()</p>
+    <img src="1.png" alt="">
+
+    <p>trimStart(), trimEnd() 消除字符串首尾空格-返回新字符串，不修改源字符串</p>
+    <div>
+        <code>var x = "  hello world  "</code> <br>
+        <code>console.log(x.trimStart())</code> <br>
+        <code>console.log(x.trimEnd())</code>
+    </div>
+
+    <p>at() 方法接受一个整数作为参数，返回参数指定位置的字符串，支持负索引（即倒数的位置）</p>
+    <div>
+        <code>var s = 'hello world'</code> <br>
+        <code>console.log(s.at(0))  // 'h'</code> <br>
+        <code>console.log(s.at(-1))  // 'd'</code>
+    </div>
+
+
+    <script>
+
+        let s = 'hello world';
+        console.log(s.includes('world'))    // true
+        console.log(s.startsWith('h'))      // true
+        console.log(s.endsWith('d'))        // true
+
+        // 这三个方法都支持第二个参数，表示开始搜索的位置
+        console.log(s.includes('world', 5))  // true
+        console.log(s.startsWith('h', 1))    // false
+        console.log(s.endsWith('d', 10))     // false
+
+        // repeat() 方法返回一个新字符串，表示将源字符串重复N次
+        var x = "qwe"
+        console.log(x.repeat(3))  //qweqwe
+        console.log(x.repeat(0))  // 空字符串
+
+        // padStart() padEnd()  字符串长度不够时，用指定字符填充
+        var y = "hello"
+        console.log(y.padStart(10, '*'))
+        console.log(y.padEnd(10, '*'))
+
+        // trimStart() trimEnd()  去掉字符串头尾的空格
+        var z = "  hello  "
+        console.log(z.trimStart())  // hello  
+        console.log(z.trimEnd())  //   hello
+
+        // at()  获取字符串指定索引位置的字符
+        var a = "hello"
+        console.log(a.at(0))
+        console.log(a.at(-1))
+
+    </script>
+    
+    
+</body>
+</html>

@@ -20,21 +20,49 @@
             border: 1px solid rgb(233, 214, 160);
             padding: 15px;
             background-color: rgb(255, 253, 247);
+            border-radius:10px;
         }
         code {
             font-size: large;
             border-left: #8b5e09 10px solid;
             padding-left: 10px;
         }
+        #tips {
+            float: left;
+            margin-right: 40px;
+        }
     </style>
 </head>
 <body>
     <h1>数组扩展新增方法</h1>
-    <p></p>
+    <p>Array.from() 方法用于将类数组转换为真正的数组</p>
+    <div style="height: 60px;">
+        <p style="font-size: 14px; margin-top: 0;">温馨提示： 常见的类数组有三类</p>
+        <span id="tips">1：arguments</span>
+        <span id="tips">2：元素集合</span>
+        <span id="tips">3：类似数组的对象</span>
+    </div>
 
+    <h3>标题1</h3>
+    <h3>标题2</h3>
+    <h3>标题3</h3>
 
     <script>
-        // 
+        // arguments 类数组,伪数组。只能使用数组的读取方式和length属性，不能使用数组方法如push() 
+        function add(){
+            console.log(arguments)   // 10 20 30
+            console.log(arguments[0])
+            console.log(arguments[1])
+            console.log(arguments[2])
+        }
+        add(10,20,30)
+
+        // 元素集合的伪数组
+        let titles = document.querySelectorAll('h3')
+        console.log(titles[0])
+
+        
+
     </script>
     
     

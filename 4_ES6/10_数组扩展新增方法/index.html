@@ -36,6 +36,7 @@
 <body>
     <h1>数组扩展新增方法</h1>
     <p>Array.from() 方法用于将类数组转换为真正的数组</p>
+    <p>Array.of() 方法用于将一组值，转换为数组</p>
     <div style="height: 60px;">
         <p style="font-size: 14px; margin-top: 0;">温馨提示： 常见的类数组有三类</p>
         <span id="tips">1：arguments</span>
@@ -54,14 +55,34 @@
             console.log(arguments[0])
             console.log(arguments[1])
             console.log(arguments[2])
+            // 转为真正的数组
+            let result = Array.from(arguments)
+            result.push(40)
+            console.log(result, '转为真正的数组并使用 push() 方法')
         }
         add(10,20,30)
 
+
         // 元素集合的伪数组
         let titles = document.querySelectorAll('h3')
-        console.log(titles[0])
+        console.log(titles)
+        console.log(Array.from(titles), '转为真正的数组')
 
-        
+
+        // 类似数组的对象
+        var user = {
+            "0": "张三",
+            "1": 20,
+            "2": "男",
+            length: 3
+        }
+        console.log(user[0])   // 张三
+        console.log(user.length)    // 7
+        console.log(Array.from(user), '转为真正的数组')
+
+
+        // Array.of()
+        console.log(Array.of(1, 2, 3, 4, 5), '使用Array.of()创建一个数组')
 
     </script>
     

@@ -21,6 +21,7 @@
             padding: 15px;
             background-color: rgb(255, 253, 247);
             border-radius:10px;
+            margin-bottom: 15px;
         }
         code {
             font-size: large;
@@ -42,6 +43,47 @@
         <span id="tips">1：arguments</span>
         <span id="tips">2：元素集合</span>
         <span id="tips">3：类似数组的对象</span>
+    </div>
+
+    <div>
+        <pre>
+// arguments 类数组,伪数组。只能使用数组的读取方式和length属性，不能使用数组方法如push() 
+function add(){
+    console.log(arguments)   // 10 20 30
+    console.log(arguments[0])
+    console.log(arguments[1])
+    console.log(arguments[2])
+    // 转为真正的数组
+    let result = Array.from(arguments)
+    result.push(40)
+    console.log(result, '转为真正的数组并使用 push() 方法')
+}
+add(10,20,30)
+
+
+// 元素集合的伪数组
+let titles = document.querySelectorAll('h3')
+console.log(titles)
+console.log(Array.from(titles), '转为真正的数组')
+
+
+// 类似数组的对象
+var user = {
+    "0": "张三",
+    "1": 20,
+    "2": "男",
+    length: 3
+}
+console.log(user[0])   // 张三
+console.log(user.length)    // 7
+console.log(Array.from(user), '转为真正的数组')
+
+
+// Array.of()
+console.log(Array.of(1, 2, 3, 4, 5), '使用Array.of()创建一个数组')
+        </pre>
+    </div>
+
     </div>
 
     <h3>标题1</h3>

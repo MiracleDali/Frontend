@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_对象的扩展</title>
+    <style>
+        h1 {
+            color: #bf8d21;
+        }
+        h2 {
+            color: #c2922a;
+        }
+        img {
+            width: 50%;
+            border: 1px solid rgb(207, 157, 20);
+        }
+        div {
+            width: 700px;
+            border: 1px solid rgb(233, 214, 160);
+            padding: 15px;
+            background-color: rgb(255, 253, 247);
+            border-radius:10px;
+            margin-bottom: 15px;
+        }
+        code {
+            font-size: large;
+            border-left: #8b5e09 10px solid;
+            padding-left: 10px;
+        }
+        #tips {
+            float: left;
+            margin-right: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>对象的扩展</h1>
+    <div>
+        <pre>
+    var name = '张三'
+    const user = {
+        // 属性简写 属性名和属性值是同样的变量名称，就可以省略
+        name,
+        age: 20,
+        sex: '女',
+
+        // 原来的写法
+        say:function() {
+            console.log('hello world');
+        },
+        // 方法简写 新的写法
+        say() {
+            console.log('hello world');
+        }
+    }
+    console.log(user.name)  // 张三
+    user.say()  // hello world
+
+
+    // 属性简写在函数返回值中的用法
+    function getpoint() {
+        var x = 10;
+        var y = 20;
+        return { x,y }
+    }
+    console.log(getpoint())
+
+
+    // 属性名表达式
+    let propkey = 'zhangruonan';
+    let people = {
+        [propkey]: '张三',
+        [propkey + '1']: '张三1'
+    }
+    console.log(people)
+
+
+    // 对象的扩展运算符
+    let z = { x: 10, y: 20, z: 30 }
+    let o = { ...z, z: 33 }
+    console.log(o)
+        </pre>
+    </div>
+
+
+
+
+    <script>
+
+        var name = '张三'
+        const user = {
+            // 属性简写 属性名和属性值是同样的变量名称，就可以省略
+            name,
+            age: 20,
+            sex: '女',
+
+            // 原来的写法
+            say:function() {
+                console.log('hello world');
+            },
+            // 方法简写 新的写法
+            say() {
+                console.log('hello world');
+            }
+        }
+        console.log(user.name)  // 张三
+        user.say()  // hello world
+
+
+        // 属性简写在函数返回值中的用法
+        function getpoint() {
+            var x = 10;
+            var y = 20;
+            return { x,y }
+        }
+        console.log(getpoint())
+
+
+        // 属性名表达式
+        let propkey = 'zhangruonan';
+        let people = {
+            [propkey]: '张三',
+            [propkey + '1']: '张三1'
+        }
+        console.log(people)
+
+
+        // 对象的扩展运算符
+        let z = { x: 10, y: 20, z: 30 }
+        let o = { ...z, z: 33 }
+        console.log(o)
+
+    </script>
+    
+    
+</body>
+</html>
+
+

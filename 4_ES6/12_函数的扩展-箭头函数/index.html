@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12_函数的扩展-箭头函数</title>
+    <style>
+        h1 {
+            color: #bf8d21;
+        }
+        h2 {
+            color: #c2922a;
+        }
+        img {
+            width: 50%;
+            border: 1px solid rgb(207, 157, 20);
+        }
+        div {
+            width: 700px;
+            border: 1px solid rgb(233, 214, 160);
+            padding: 15px;
+            background-color: rgb(255, 253, 247);
+            border-radius:10px;
+            margin-bottom: 15px;
+        }
+        code {
+            font-size: large;
+            border-left: #8b5e09 10px solid;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>函数的扩展-箭头函数</h1>
+    <p>ES6 允许使用“箭头”（=>）定义函数</p>
+    <div>
+        <code>var add = (x) => x;</code> <br>
+        <code>// 等同于</code> <br>
+        <code>var add = function (x) {return x;};</code>
+        <br> <br>
+        <img src="1.png" alt="" style="width: 90%;">
+        <br><br>
+        <img src="2.png" alt="" style="width: 90%;">
+    </div>
+    
+    
+
+    <script>
+
+        // ES5 函数定义
+        function fn1(x){
+            console.log('函数-fn1',x);
+        }    
+        fn1(1)
+        // 赋值方式声明函数
+        var fn2 = function (x,y) {
+            return x + y;
+        }
+        console.log(fn2(5,8))
+
+
+        // 箭头函数
+        var fn3 = (x,y) => x+y;    // 多个参数
+        console.log(fn3(50,80))
+
+        var fn4 = x => x;          // 一个参数
+        console.log(fn4(100))
+
+        var fn5 = () => 1;         // 无参数
+        console.log(fn5())
+
+
+        // 如果箭头函数的代码块部分多余一条语句，就要使用大括号将他们括起来，并且必须使用return关键字返回
+        // function 写法
+        var fn6 = function (x,y) {       
+            var z = 30;
+            return x + y + z;
+        }
+        console.log(fn6(10,20))
+        // 箭头函数写法
+        var fn7 = (x,y) => {
+            var z = 30;
+            return x + y + z;
+        }
+        console.log(fn7(10,20))
+
+        // 由于大括号被解释为代码块，所以如果箭头函数直接返回一个对象，需要加括号。否则会报错
+        var fn8 = function(x,y) {
+            return { xx: x, yy: y }
+        }
+        console.log(fn8(10,20))
+        // 箭头函数写法
+        var fn9 = (x,y) => ({
+            xx: x,
+            yy: y
+        })
+        console.log(fn9(100,200))
+
+
+        // 箭头函数的一个用处是简化回调函数 （匿名函数）
+        var arr = [11,22,33]
+        arr.map(function(element, index) {
+            console.log(element, index)
+        })
+        arr.map((element, index)=>{
+            console.log(element, index)
+        })
+
+
+        // 箭头函数的this指向问题
+        var name = '张三'
+        var user = {
+            name: 'lisa',
+            age: 20,
+            sex: '女',
+            getname() {
+                console.log(this.name);  // 这里的this指向的是user对象  输出 lisa
+            },
+            getname1() {
+                setTimeout(function(){
+                    console.log(this.name);  // 这里的this指向的是window对象  输出 张三
+                },100)
+            },
+            getname2() {
+                // 箭头函数没有自己的this，会向上找
+                setTimeout(() => {
+                    console.log(this.name);  // 这里的this指向的是user对象  输出 lisa
+                },100)
+            }
+        }
+        user.getname()
+        user.getname1()
+        user.getname2()
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+

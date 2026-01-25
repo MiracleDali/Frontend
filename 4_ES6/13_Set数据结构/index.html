@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13_set数据结构</title>
+    <style>
+        h1 {
+            color: #bf8d21;
+        }
+        h2 {
+            color: #c2922a;
+        }
+        img {
+            width: 50%;
+            border: 1px solid rgb(207, 157, 20);
+        }
+        div {
+            width: 700px;
+            border: 1px solid rgb(233, 214, 160);
+            padding: 15px;
+            background-color: rgb(255, 253, 247);
+            border-radius:10px;
+            margin-bottom: 15px;
+        }
+        code {
+            font-size: large;
+            border-left: #8b5e09 10px solid;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>set数据结构</h1>
+    <p>ES6 提供了新的数据结构Set,他类似与数组，但是成员值是唯一的，没有重复的值</p>
+    <p style="font-size: 15px;"> Set 本身是一个构造函数，用来生成Set数据结构</p>
+    <div>
+        <code>var s = new Set();</code> <br>
+        <code>var arr = [10, 20, 30, 40, 50, 50];  </code> <br>
+        <code>arr.forEach(x => s.add(x));</code> <br>
+        <code>console.log(s);  // 输出 {10, 20, 30, 40, 50}  数据不重复</code> <br>
+    </div>
+
+    <p style="font-size: 15px;"> Set 函数可以接受一个数组作为参数</p>
+    <div>
+        <code>const s1 = new Set([1,2,3,]);</code> <br>
+        <code>console.log(s1);  </code> <br>
+    </div>
+
+
+    <script>
+        // 创建 Set
+        var s = new Set();
+        var arr = [10, 20, 30, 40, 50, 50];  
+        arr.forEach(x => s.add(x));
+        console.log(s, '创建Set');  // 输出 {10, 20, 30, 40, 50}  数据不重复
+
+
+        // 接受一个数组作为参数
+        const s1 = new Set([1,2,3,4]);
+        console.log(s1, '接受一个数组作为参数');
+
+
+        // 数组去除重复成员的方法
+        var arr3 = [10, 10, 20, 20, 30, 40, 50, 50];
+        var s3 = new Set(arr3);
+        console.log(s3, '去除数组重复成员方法')
+        // Set 也可以使用 扩展运算符 [...Set]
+        console.log([...s3], '去除数组重复成员方法')
+        // 上面的可以简写成
+        console.log([... new Set(arr3)], '去除数组重复成员方法')
+
+
+        // 字符串去重
+        console.log(new Set("qqwweerr"), '去重字符串方法')
+        console.log([...new Set("qqwweerr")], '去重字符串方法')
+        console.log([...new Set("qqwweerr")].join(''), '去重字符串方法')
+
+
+        // 向Set加入值的时候，不会发生类型转换， 所以 5 和 '5' 是两个值
+        var s5 = new Set();
+        s5.add(5);
+        s5.add("5");
+        console.log(s5, "向Set加入值时，不会发生类型转换")
+
+
+        // size 属性
+        var s6 = new Set();
+        s6.add(5);
+        s6.add("5");
+        console.log(s6.size, "size 属性")
+
+
+    </script>
+    
+</body>
+</html>
+
+
+
+

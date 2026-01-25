@@ -12,7 +12,7 @@
             color: #c2922a;
         }
         img {
-            width: 50%;
+            width: 90%;
             border: 1px solid rgb(207, 157, 20);
         }
         div {
@@ -34,12 +34,41 @@
 
     <h1>Promise 对象</h1>
     <div>
-        <code>add(), 添加方法</code> <br>
+        <img src="1.png" alt=""> <br>
+        <code>ES6 规定，Promise 对象是一个构造函数，用来生成Promise 实例</code> <br>
     </div>
+    <div id="box">等待图标加载</div>
 
 
     <script>
         
+        var box = document.getElementById('box');
+
+        function loadImageAsync(url){
+            const promise = new Promise(function(resolve, reject){
+                // 异步处理：消耗时间的代码
+                const image = new Image();  // 创建image对象
+                image.src = url; 
+                image.onload = function(){
+                    resolve(image);  // 状态改变为成功
+                }
+                image.onerror = function(){
+                    reject(new Error('图片加载失败' + url))
+                }
+            })
+            return promise;
+        }
+
+        const promise = loadImageAsync('http://115.190.244.134:8080/Frontend/1_HTML/14_%E5%9D%97%E5%85%83%E7%B4%A0%E5%92%8C%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/1.png');
+        promise.then(function(data){
+            // 获取图片成功
+            box.append(data);
+        }, function(error){
+            // 获取图片失败
+            box.innerHTML = "图片加载失败";
+            console.log(error);
+        })
+
     </script>
     
 </body>

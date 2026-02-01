@@ -1,3 +1,1 @@
-
-
-const Hello = "Hello World"
+const Hello = "hello world"

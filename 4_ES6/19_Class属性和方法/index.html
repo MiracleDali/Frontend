@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 属性和方法</title>
+<style>
+        h1 {
+            color: #bf8d21;
+        }
+        h2 {
+            color: #c2922a;
+        }
+        img {
+            width: 90%;
+            border: 1px solid rgb(207, 157, 20);
+        }
+        div {
+            width: 700px;
+            border: 1px solid rgb(233, 214, 160);
+            padding: 15px;
+            background-color: rgb(255, 253, 247);
+            border-radius:10px;
+            margin-bottom: 15px;
+        }
+        code {
+            font-size: large;
+            border-left: #8b5e09 10px solid;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Class 属性和方法</h1>
+    <div>
+        <code>类的 实例方法 -- 通过类的实例对象调用方法</code> <br>
+        <code>类的 实例属性 -- 指的是类的实例对象可调用的属性</code> <br>
+        <code>类的 静态方法 -- 静态方法只能通过类本身调用，不能通过类的实例对象调用，如果静态方法包含 this 关键字，这个this指的是类，而不是实例</code><br>
+        <code>类的 静态属性 -- </code>
+    </div>
+
+
+
+    <script>
+
+
+        class People{
+
+            // 类属性
+            constructor(name, age){
+                this.name = name;
+                this.age = age;
+            }
+
+            // 类方法
+            say(){
+                console.log(this.name + ' say hello')
+            }
+            // 类方法
+            getage(){
+                return this.age
+            }
+
+            // 静态方法
+            static getName(){
+                console.log('getName')
+                console.log(this.name)
+                console.log(new People('匿名', 0));
+            }
+        }
+
+
+        // p 是创建的实例对象
+        const p = new People('张三', 18);
+        // 调用类的实例方法
+        p.say();
+        console.log(p.getage());  
+
+        // 获取实例属性
+        console.log(p.name, p.age);
+
+        // 调用静态方法
+        People.getName();  // People
+
+        // 静态属性
+        People.sex = '男';
+        console.log(People.sex);
+        
+
+    </script>
+    
+</body>
+</html>
+
